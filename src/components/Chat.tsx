@@ -20,7 +20,7 @@ export const Chat = () => {
     e.preventDefault();
     if (!input.trim()) return;
 
-    const userMessage = { role: "user", content: input.trim() };
+    const userMessage: Message = { role: "user", content: input.trim() };
     setMessages((prev) => [...prev, userMessage]);
     setInput("");
     setIsLoading(true);
@@ -28,7 +28,10 @@ export const Chat = () => {
     try {
       // This is where you would integrate with your AI API
       // For now, we'll just simulate a response
-      const response = { role: "assistant", content: "This is a simulated AI response. Please integrate with your preferred AI API." };
+      const response: Message = { 
+        role: "assistant", 
+        content: "This is a simulated AI response. Please integrate with your preferred AI API." 
+      };
       
       setTimeout(() => {
         setMessages((prev) => [...prev, response]);
