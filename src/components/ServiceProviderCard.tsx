@@ -25,12 +25,12 @@ export const ServiceProviderCard = ({
       <img
         src={image}
         alt={name}
-        className="w-16 h-16 object-cover rounded-lg"
+        className="w-24 h-24 object-cover rounded-lg"
       />
-      <div className="flex-1 min-w-0">
+      <div className="flex-1">
         <div className="flex justify-between items-start">
           <div>
-            <h3 className="font-semibold text-gray-900 truncate">{name}</h3>
+            <h3 className="font-semibold text-gray-900">{name}</h3>
             <p className="text-sm text-gray-600">{profession}</p>
           </div>
           <div className="flex items-center">
@@ -39,15 +39,15 @@ export const ServiceProviderCard = ({
           </div>
         </div>
         <div className="flex items-center mt-1 text-gray-600 text-sm">
-          <MapPin className="w-4 h-4 mr-1 flex-shrink-0" />
-          <p className="truncate">{address}</p>
+          <MapPin className="w-4 h-4 mr-1" />
+          <p>{address}</p>
         </div>
         <div className="flex items-center mt-1 text-gray-600 text-sm">
-          <Clock className="w-4 h-4 mr-1 flex-shrink-0" />
-          <p className="truncate">{nextAvailable}</p>
+          <Clock className="w-4 h-4 mr-1" />
+          <p>{nextAvailable}</p>
         </div>
       </div>
-      <Button size="sm" className="flex-shrink-0">Book Now</Button>
+      <Button size="sm">Book Now</Button>
     </div>
   );
 };
