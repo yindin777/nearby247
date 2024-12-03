@@ -1,6 +1,6 @@
 name = "nearby724"
 type = "javascript"
 
-account_id = "YOUR_ACCOUNT_ID"  # Replace with your actual Cloudflare account ID
-workers_dev = true
-compatibility_date = "2024-12-03"
+[build]
+command = "npm run build"
+output_dir = "dist"  # Ensure this matches your build output directory
