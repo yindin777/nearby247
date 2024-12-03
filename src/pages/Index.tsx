@@ -27,7 +27,6 @@ const Index = () => {
       nextAvailable: "Tomorrow at 10:00 AM",
       rating: 4.9,
     },
-    // Adding more providers to demonstrate scrolling
     {
       name: "Dr. Michael Brown",
       profession: "Dentist",
@@ -62,17 +61,10 @@ const Index = () => {
           <Map />
         </div>
 
-        {/* Search and AI Section - Fixed below map */}
+        {/* Chat Section - Fixed below map */}
         <div className="fixed top-[calc(47vh+4rem)] left-0 w-full bg-white shadow-md z-30 p-4">
           <div className="container mx-auto max-w-6xl">
-            <div className="flex gap-4 items-start">
-              <div className="w-1/3">
-                <SearchBar />
-              </div>
-              <div className="w-2/3">
-                <Chat />
-              </div>
-            </div>
+            <Chat />
           </div>
         </div>
 
