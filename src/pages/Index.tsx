@@ -3,6 +3,7 @@ import { Map } from "@/components/Map";
 import { ServiceProviderCard } from "@/components/ServiceProviderCard";
 import { Chat } from "@/components/Chat";
 import { useState } from "react";
+import { Home, Search, Calendar, User } from "lucide-react";
 
 const Index = () => {
   const [selectedDate, setSelectedDate] = useState<Date | undefined>(new Date());
@@ -72,11 +73,33 @@ const Index = () => {
         </div>
 
         {/* Results Section - Scrollable */}
-        <div className="mt-[calc(47vh+20vh+4rem)] container mx-auto max-w-6xl p-4">
+        <div className="mt-[calc(47vh+20vh+4rem)] container mx-auto max-w-6xl p-4 mb-16">
           <div className="space-y-4">
             {providers.map((provider, index) => (
               <ServiceProviderCard key={index} {...provider} />
             ))}
+          </div>
+        </div>
+
+        {/* Bottom Menu - Fixed */}
+        <div className="fixed bottom-0 left-0 w-full bg-white shadow-lg z-50">
+          <div className="flex justify-around items-center py-3 px-4">
+            <button className="flex flex-col items-center text-gray-600 hover:text-primary">
+              <Home className="w-6 h-6" />
+              <span className="text-xs mt-1">Home</span>
+            </button>
+            <button className="flex flex-col items-center text-gray-600 hover:text-primary">
+              <Search className="w-6 h-6" />
+              <span className="text-xs mt-1">Search</span>
+            </button>
+            <button className="flex flex-col items-center text-gray-600 hover:text-primary">
+              <Calendar className="w-6 h-6" />
+              <span className="text-xs mt-1">Bookings</span>
+            </button>
+            <button className="flex flex-col items-center text-gray-600 hover:text-primary">
+              <User className="w-6 h-6" />
+              <span className="text-xs mt-1">Profile</span>
+            </button>
           </div>
         </div>
       </div>
