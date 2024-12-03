@@ -8,7 +8,10 @@ export const Map = () => {
 
   useEffect(() => {
     if (mapRef.current && !mapInstanceRef.current) {
-      mapInstanceRef.current = L.map(mapRef.current).setView([34.0522, -118.2437], 13);
+      mapInstanceRef.current = L.map(mapRef.current, {
+        scrollWheelZoom: false, // Disable scroll wheel zoom
+        dragging: true, // Keep dragging enabled
+      }).setView([34.0522, -118.2437], 13);
       
       L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
         attribution: '© OpenStreetMap contributors'
@@ -24,7 +27,7 @@ export const Map = () => {
   }, []);
 
   return (
-    <div className="relative w-full h-[calc(100vh-5rem)] rounded-xl overflow-hidden shadow-lg animate-fade-in">
+    <div className="w-full h-full">
       <div ref={mapRef} className="w-full h-full" />
     </div>
   );
