@@ -1,9 +1,6 @@
 import { SearchBar } from "@/components/SearchBar";
-import { LocationCard } from "@/components/LocationCard";
 import { Map } from "@/components/Map";
 import { ServiceProviderCard } from "@/components/ServiceProviderCard";
-import { Button } from "@/components/ui/button";
-import { Calendar } from "@/components/ui/calendar";
 import { useState } from "react";
 
 const Index = () => {
@@ -34,26 +31,18 @@ const Index = () => {
     <div className="min-h-screen bg-gray-50">
       <div className="container mx-auto py-8">
         <h1 className="text-4xl font-bold text-center mb-8 animate-fade-in">
-          Find Professional Services Near You
+          NearBy
         </h1>
         <SearchBar />
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mt-8">
-          <div className="lg:col-span-2 space-y-6">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div className="lg:col-span-2">
+            <div className="space-y-4">
               {providers.map((provider, index) => (
                 <ServiceProviderCard key={index} {...provider} />
               ))}
             </div>
           </div>
           <div className="space-y-6">
-            <div className="bg-white rounded-xl shadow-lg p-4">
-              <Calendar
-                mode="single"
-                selected={selectedDate}
-                onSelect={setSelectedDate}
-                className="rounded-md"
-              />
-            </div>
             <div className="sticky top-8">
               <Map />
             </div>
