@@ -1,7 +1,6 @@
 import { SearchBar } from "@/components/SearchBar";
 import { Map } from "@/components/Map";
 import { ServiceProviderCard } from "@/components/ServiceProviderCard";
-import { UndoButton } from "@/components/UndoButton";
 import { useState } from "react";
 
 const Index = () => {
@@ -46,7 +45,6 @@ const Index = () => {
           </div>
         </div>
       </div>
-      <UndoButton />
     </div>
   );
 };
