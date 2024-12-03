@@ -1,6 +1,7 @@
 import { SearchBar } from "@/components/SearchBar";
 import { Map } from "@/components/Map";
 import { ServiceProviderCard } from "@/components/ServiceProviderCard";
+import { Chat } from "@/components/Chat";
 import { useState } from "react";
 
 const Index = () => {
@@ -45,6 +46,9 @@ const Index = () => {
           <div className="space-y-6">
             <div className="sticky top-8">
               <Map />
+              <div className="mt-8">
+                <Chat />
+              </div>
             </div>
           </div>
         </div>
