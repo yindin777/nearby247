@@ -31,7 +31,7 @@
   }
 
   body {
-    @apply bg-background text-foreground antialiased;
+    @apply bg-background text-foreground antialiased min-w-[1000px] overflow-x-auto;
     font-feature-settings: "rlig" 1, "calt" 1;
   }
 }
