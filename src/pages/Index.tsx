@@ -29,23 +29,19 @@ const Index = () => {
 
   return (
     <div className="min-h-screen bg-gray-50">
-      <div className="container mx-auto py-8">
+      <div className="container mx-auto py-8 px-4 max-w-[1400px]">
         <h1 className="text-4xl font-bold text-center mb-8 animate-fade-in">
           NearBy
         </h1>
         <SearchBar />
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mt-8">
-          <div className="lg:col-span-2">
-            <div className="space-y-4">
-              {providers.map((provider, index) => (
-                <ServiceProviderCard key={index} {...provider} />
-              ))}
-            </div>
+        <div className="grid grid-cols-[1fr_400px] gap-8 mt-8 min-w-[1000px] mx-auto">
+          <div className="space-y-4 overflow-y-auto max-h-[calc(100vh-300px)]">
+            {providers.map((provider, index) => (
+              <ServiceProviderCard key={index} {...provider} />
+            ))}
           </div>
-          <div className="space-y-6">
-            <div className="sticky top-8">
-              <Map />
-            </div>
+          <div className="h-[calc(100vh-300px)]">
+            <Map />
           </div>
         </div>
       </div>
