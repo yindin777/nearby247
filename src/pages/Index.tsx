@@ -2,7 +2,7 @@ import { SearchBar } from "@/components/SearchBar";
 import { Map } from "@/components/Map";
 import { ServiceProviderCard } from "@/components/ServiceProviderCard";
 import { useState } from "react";
-import { Home, Search, Calendar, User, Settings, History, Star } from "lucide-react";
+import { Settings, History, Star } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const Index = () => {
@@ -71,14 +71,18 @@ const Index = () => {
 
       {/* Main Content */}
       <div className="flex flex-col pt-16">
-        {/* Map Section */}
-        <div className="fixed top-16 left-0 w-full h-[47vh] bg-gray-100 z-40">
-          <Map />
+        {/* Search Bar - Now at the top */}
+        <div className="fixed top-16 left-0 w-full z-50">
           <SearchBar />
         </div>
 
+        {/* Map Section */}
+        <div className="fixed top-[calc(4rem+6.5rem)] left-0 w-full h-[47vh] bg-gray-100 z-40">
+          <Map />
+        </div>
+
         {/* Results Section - Scrollable */}
-        <div className="mt-[calc(47vh+4rem)] container mx-auto max-w-6xl p-4 mb-16">
+        <div className="mt-[calc(47vh+10.5rem)] container mx-auto max-w-6xl p-4 mb-16">
           <div className="space-y-4">
             {providers.map((provider, index) => (
               <ServiceProviderCard key={index} {...provider} />
