@@ -1,0 +1,38 @@
+export const providers = [
+  {
+    name: "Dr. Sarah Johnson",
+    profession: "Dentist",
+    address: "123 Medical Center Dr",
+    distance: "0.5 miles",
+    image: "/lovable-uploads/9455b9f2-e382-4598-a54f-3b53fe1cba37.png",
+    nextAvailable: "Today at 2:00 PM",
+    rating: 4.8,
+  },
+  {
+    name: "Robert Smith, Esq.",
+    profession: "Lawyer",
+    address: "456 Legal Plaza",
+    distance: "0.8 miles",
+    image: "/lovable-uploads/9455b9f2-e382-4598-a54f-3b53fe1cba37.png",
+    nextAvailable: "Tomorrow at 10:00 AM",
+    rating: 4.9,
+  },
+  {
+    name: "Dr. Michael Brown",
+    profession: "Dentist",
+    address: "789 Health Ave",
+    distance: "1.2 miles",
+    image: "/lovable-uploads/9455b9f2-e382-4598-a54f-3b53fe1cba37.png",
+    nextAvailable: "Tomorrow at 2:30 PM",
+    rating: 4.7,
+  },
+  {
+    name: "Emily White, DDS",
+    profession: "Dentist",
+    address: "321 Dental St",
+    distance: "1.5 miles",
+    image: "/lovable-uploads/9455b9f2-e382-4598-a54f-3b53fe1cba37.png",
+    nextAvailable: "Friday at 11:00 AM",
+    rating: 4.9,
+  },
+];
