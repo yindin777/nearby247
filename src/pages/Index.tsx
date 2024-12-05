@@ -10,8 +10,8 @@ const Index = () => {
     <div className="min-h-screen bg-gray-50 overflow-hidden">
       <Header />
       
-      {/* Search Bar - Fixed position */}
-      <div className="fixed top-16 left-0 w-full z-50">
+      {/* Search Bar - Fixed position directly under header */}
+      <div className="fixed top-14 left-0 w-full z-50">
         <SearchBar />
       </div>
 
