@@ -2,7 +2,8 @@ import { SearchBar } from "@/components/SearchBar";
 import { Map } from "@/components/Map";
 import { ServiceProviderCard } from "@/components/ServiceProviderCard";
 import { useState } from "react";
-import { Home, Search, Calendar, User } from "lucide-react";
+import { Home, Search, Calendar, User, Settings, History, Star } from "lucide-react";
+import { Button } from "@/components/ui/button";
 
 const Index = () => {
   const [selectedDate, setSelectedDate] = useState<Date | undefined>(new Date());
@@ -47,17 +48,33 @@ const Index = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-gray-50 flex flex-col">
+    <div className="min-h-screen bg-gray-50">
       {/* Header - Fixed */}
-      <header className="bg-white shadow-sm py-4 fixed top-0 w-full z-50">
-        <h1 className="text-2xl font-bold text-center">NearBy</h1>
+      <header className="bg-primary text-white py-4 fixed top-0 w-full z-50">
+        <div className="container mx-auto px-4 flex justify-between items-center">
+          <div className="flex items-center gap-3">
+            <img
+              src="/lovable-uploads/60e3683e-408d-4ae1-b42d-9803e6219e5d.png"
+              alt="Profile"
+              className="w-10 h-10 rounded-full bg-white/20"
+            />
+            <div className="flex flex-col">
+              <span className="font-medium">Robert Doe</span>
+              <span className="text-xs opacity-80">robert@example.com</span>
+            </div>
+          </div>
+          <Button variant="ghost" className="hover:bg-white/20">
+            Sign up
+          </Button>
+        </div>
       </header>
 
-      {/* Main Content - Starts below header */}
+      {/* Main Content */}
       <div className="flex flex-col pt-16">
-        {/* Map Section - Fixed 47vh */}
+        {/* Map Section */}
         <div className="fixed top-16 left-0 w-full h-[47vh] bg-gray-100 z-40">
           <Map />
+          <SearchBar />
         </div>
 
         {/* Results Section - Scrollable */}
@@ -72,22 +89,18 @@ const Index = () => {
         {/* Bottom Menu - Fixed */}
         <div className="fixed bottom-0 left-0 w-full bg-white shadow-lg z-50">
           <div className="flex justify-around items-center py-3 px-4">
-            <button className="flex flex-col items-center text-gray-600 hover:text-primary">
-              <Home className="w-6 h-6" />
-              <span className="text-xs mt-1">Home</span>
-            </button>
-            <button className="flex flex-col items-center text-gray-600 hover:text-primary">
-              <Search className="w-6 h-6" />
-              <span className="text-xs mt-1">Search</span>
-            </button>
-            <button className="flex flex-col items-center text-gray-600 hover:text-primary">
-              <Calendar className="w-6 h-6" />
-              <span className="text-xs mt-1">Bookings</span>
-            </button>
-            <button className="flex flex-col items-center text-gray-600 hover:text-primary">
-              <User className="w-6 h-6" />
-              <span className="text-xs mt-1">Profile</span>
-            </button>
+            <Button variant="ghost" className="flex flex-col items-center text-gray-600 hover:text-primary">
+              <Settings className="w-6 h-6" />
+              <span className="text-xs mt-1">Settings</span>
+            </Button>
+            <Button variant="ghost" className="flex flex-col items-center text-gray-600 hover:text-primary">
+              <History className="w-6 h-6" />
+              <span className="text-xs mt-1">History</span>
+            </Button>
+            <Button variant="ghost" className="flex flex-col items-center text-gray-600 hover:text-primary">
+              <Star className="w-6 h-6" />
+              <span className="text-xs mt-1">Favorite</span>
+            </Button>
           </div>
         </div>
       </div>
