@@ -7,7 +7,7 @@ import { providers } from "@/data/providers";
 
 const Index = () => {
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-gray-50 overflow-hidden">
       <Header />
       
       {/* Search Bar - Fixed position */}
@@ -19,8 +19,10 @@ const Index = () => {
       <MapSection />
 
       {/* Results Section - Scrollable */}
-      <div className="mt-[calc(47vh+10.5rem)] container mx-auto max-w-6xl p-4 mb-16">
-        <ProviderList providers={providers} />
+      <div className="mt-[calc(47vh+10.5rem)] pb-20">
+        <div className="px-4">
+          <ProviderList providers={providers} />
+        </div>
       </div>
 
       {/* Bottom Navigation */}
