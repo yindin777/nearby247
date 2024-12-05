@@ -1,0 +1,13 @@
+name = "nearby724"
+type = "javascript"
+
+# Specify your Cloudflare account ID
+account_id = "310e549bbc8846e19ec8b3bd662d5f00"  # Replace with your actual Cloudflare account ID
+
+[build]
+command = "bun build"  # or your specific build command
+output_dir = "dist"         # Directory where the built files are located
+pages_build_output_dir = "dist"  # Specify the output directory for Pages
+
+# Optional: Specify the compatibility date for your project
+compatibility_date = "2024-12-03"
