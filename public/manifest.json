@@ -1,6 +1,6 @@
 {
-  "name": "NearBy",
-  "short_name": "NearBy",
+  "name": "nearby247",
+  "short_name": "nearby247",
   "description": "Find services near you",
   "start_url": "/",
   "display": "standalone",
