@@ -1,4 +1,4 @@
-import { MapPin, Star, Clock } from "lucide-react";
+import { MapPin, Star, Clock, User } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 interface ServiceProviderCardProps {
@@ -22,11 +22,9 @@ export const ServiceProviderCard = ({
 }: ServiceProviderCardProps) => {
   return (
     <div className="flex items-center gap-3 p-3 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow animate-fade-in">
-      <img
-        src={image}
-        alt={name}
-        className="w-16 h-16 object-cover rounded-lg"
-      />
+      <div className="w-16 h-16 bg-gray-100 rounded-lg flex items-center justify-center">
+        <User className="w-8 h-8 text-gray-400" />
+      </div>
       <div className="flex-1">
         <div className="flex justify-between items-start">
           <div>
