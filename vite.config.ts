@@ -1,10 +1,14 @@
-name = "nearby360"  # Match your repo/project name here
-type = "javascript"
+import { defineConfig } from "vite";
+import react from "@vitejs/plugin-react-swc";
 
-[build]
-command = "npm run build"  # This runs the build command from package.json
-output_dir = "dist"  # This is where Vite will output the built files
-
-[[pages]]
-name = "nearby360"  # Match the project name here as well
-path = "dist"  # This is the directory from which Cloudflare will serve files
+// https://vitejs.dev/config/
+export default defineConfig({
+  plugins: [react()],
+  build: {
+    outDir: "dist", // Ensure this matches the output_dir in wrangler.toml
+    emptyOutDir: true,
+  },
+  server: {
+    port: 3000,
+  },
+});
